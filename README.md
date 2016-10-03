@@ -80,12 +80,9 @@ import React from 'react'
 import Router from 'react-router/BrowserRouter'
 import { Link, Match, Miss } from 'react-router'
 
-import NoMatch from './NoMatch'
-import NavLink from './NavLink'
-import Topics from './Topics'
-import Nav from './Nav'
-import About from './About'
 import Home from './Home'
+import Other from './Other'
+import NoMatch from './NoMatch'
 
 const App = () => (
   <Router>
@@ -96,6 +93,7 @@ const App = () => (
       </ul>
       <hr/>
       <Match exactly pattern='/' component={Home}/>
+      <Match pattern='/other' component={Other}/>
       <Miss component={NoMatch}/>
     </div>
   </Router>
@@ -118,6 +116,18 @@ export default Home
 ````
 
 ````
+/* Other.js */
+import React from 'react'
+const Home = () => {return (
+  <div className='other'>
+    <h2>Other</h2>
+  </div>
+)}
+
+export default Home
+````
+
+````
 /* NoMatch.js */
 import React from 'react'
 
@@ -131,12 +141,44 @@ export default NoMatch
 ````
 
 
+#### gotcha alert
+
+look back up there at 'App.js' and notice the distinction between the two `<Match />` components.
+
+>when you're matching a route to the root page (`/`), be sure to use `exactly` flat: `<Match exactly pattern to=”/”>Home</Match>`
+
+## let's doooo!
+
 run it!
 
 `npm install && npm run thatrap`
 
-### gotchas
+### Stateless functional components
 
->when you're setting a link to the `index.html` page, besure to use `exactly` flat: `<Link exactly pattern to=”/”>Home</Link>`
+We're using Stateless Functional Component declaration... React loves it when we do this.
+
+
+
+### Make another route
+
+This is your chance to make a simple new component, and match it to a route! So easy!
+
+### Make a route with a nested component (nested route / nested view)
+
+Make a nested view
+
+
+````
+/* Topics.js */
+import React from 'react'
+import {Link, Match} from 'react-router'
+
+// When <Match /> renders the UI Component, it passes that {pathname} to the component's
+// Stateless Functionl Component
+
+
+````
+
+
 
 ###
