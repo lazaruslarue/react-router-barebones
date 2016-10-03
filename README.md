@@ -165,20 +165,4 @@ This is your chance to make a simple new component, and match it to a route! So 
 
 ### Make a route with a nested component (nested route / nested view)
 
-Make a nested view
-
-
-````
-/* Topics.js */
-import React from 'react'
-import {Link, Match} from 'react-router'
-
-// When <Match /> renders the UI Component, it passes that {pathname} to the component's
-// Stateless Functionl Component
-
-
-````
-
-
-
-###
+Take a look at `Topics.js` for all your inspirational needs.
