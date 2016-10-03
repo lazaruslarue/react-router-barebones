@@ -1,7 +1,11 @@
 import React from 'react'
 
-export default React.createClass({
-  render() {
-    return <div>About</div>
-  }
-})
+const About = () => (
+  <div className='about'>
+    <h1>This is my name</h1>
+    <p>don't wear it out</p>
+  </div>
+
+)
+
+export default About

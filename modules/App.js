@@ -1,17 +1,25 @@
 import React from 'react'
+import Router from 'react-router/BrowserRouter'
+import { Link, Match, Miss } from 'react-router'
+
+import NoMatch from './NoMatch'
 import NavLink from './NavLink'
+import Topics from './Topics'
+import Nav from './Nav'
+import About from './About'
+import Home from './Home'
 
-export default React.createClass({
-  render() {
-    return <div>
-      <h1>Links ,bruh</h1>
-      <ul role="nav">
-        <li><NavLink to="/about" >About</NavLink></li>
-        <li><NavLink to="/repos" >Repos</NavLink></li>
-
-        {/* what is this doing? */}
-        {this.props.children}
-      </ul>
+const App = () => (
+  <Router>
+    <div>
+      <NavLink />
+      <hr/>
+      <Match exactly pattern='/' component={Home}/>
+      <Match pattern='/about' component={About}/>
+      <Match pattern='/topics' component={Topics}/>
+      <Miss component={NoMatch}/>
     </div>
-  }
-})
+  </Router>
+)
+
+export default App
