@@ -145,7 +145,7 @@ export default NoMatch
 
 look back up there at 'App.js' and notice the distinction between the two `<Match />` components.
 
->when you're matching a route to the root page (`/`), be sure to use `exactly` flat: `<Match exactly pattern to=”/”>Home</Match>`
+>when you're matching a route to the root page (`/`), be sure to use the "exactly" keyword in the component. like so --> `<Match exactly pattern to=”/”>Home</Match>`
 
 ## let's doooo!
 
@@ -157,25 +157,32 @@ run it!
 
 We're using Stateless Functional Component declaration... React loves it when we do this.
 
-When you use "Stateless Functional Components" you're informing react that you don't need access to a `this` keyword. Inside, during the digest cycle, React will eventually be able to make optimizations to the way it creates & manages the Components.
+When you use "Stateless Functional Components" you're informing react that you don't need access to a `this` keyword. Inside, during the digest cycle, React's team of purple elves will (pending updates to React) be able to make optimizations to the way it creates & manages the Components.
 
-A stateless functional component looks like this:
+In the meantime, as the saying goes, you should write your stateless functional components like this:
 
 ````
 const JustAnotherFunction = () => (
   <div>
     <h2>Returning an H2 nested in a DIV </h2>
-  </div>
+  </div>looks
 )
 ````
 
-(Other options for components are [`React.createClass`](http://devdocs.io/react/docs/top-level-api#react.createclass) & extending `React.Component`
+(Other options for components are [`React.createClass`](http://devdocs.io/react/docs/top-level-api#react.createclass) & extending `React.Component`.
 
+## your turn
 
-### Make another route
+This is your chance to twerk `react-router` with all your might. The docs for this Component Library is great. First person with a pull request with instructions for building the react-router docs locally gets "a candy bar".
 
-This is your chance to make a simple new component, and match it to a route! So easy!
+But before you get started on that, try looking at the examples and making your own new routes...
 
-### Make a route with a nested component (nested route / nested view)
+### Make another Match route
+
+This is your chance to make a simple new component, and match it to a route! The React practically writes itself!
+
+### Make a Match with nested Link & Match components
+
+What's going to happen when you do this?
 
 Take a look at `Topics.js` for all your inspirational needs.
