@@ -157,6 +157,19 @@ run it!
 
 We're using Stateless Functional Component declaration... React loves it when we do this.
 
+When you use "Stateless Functional Components" you're informing react that you don't need access to a `this` keyword. Inside, during the digest cycle, React will eventually be able to make optimizations to the way it creates & manages the Components.
+
+A stateless functional component looks like this:
+
+````
+const JustAnotherFunction = () => (
+  <div>
+    <h2>Returning an H2 nested in a DIV </h2>
+  </div>
+)
+````
+
+(Other options for components are [`React.createClass`](http://devdocs.io/react/docs/top-level-api#react.createclass) & extending `React.Component`
 
 
 ### Make another route
