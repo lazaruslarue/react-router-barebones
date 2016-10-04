@@ -74,6 +74,8 @@ module.exports = {
 <script src="bundle.js"></script>
 ````
 
+We need to make some basic components in the `./modules` directory:
+
 ````
 /* App.js */
 import React from 'react'
