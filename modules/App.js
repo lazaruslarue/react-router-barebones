@@ -5,6 +5,7 @@ import { Link, Match, Miss } from 'react-router'
 import NoMatch from './NoMatch'
 import About from './About'
 import Home from './Home'
+import NavLink from './NavLink'
 
 const App = () => (
   <Router>
